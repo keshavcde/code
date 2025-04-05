@@ -11,7 +11,8 @@
     height: 100vh;
     /* border: 4px solid black; */
     z-index: 9999;
-    background-color: #44474771;
+    background: linear-gradient(to bottom left,rgb(247, 138, 223), rgb(247, 181, 60));
+
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     /* margin-bottom: 50px; */
