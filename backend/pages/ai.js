@@ -2,31 +2,45 @@
 const { GoogleGenAI } = require('@google/genai');
 const express = require('express');
 const airouter = express.Router();
-const {middle}=require("../middleware")
+const { middle } = require("../middleware");
 
 // Initialize the AI client
 const ai = new GoogleGenAI({
-  apiKey: 'AIzaSyApHvm7W5-7iaxwjJ9xumY0cSDF_rrV3vg', // Replace with your actual API key
+  apiKey: 'AIzaSyApHvm7W5-7iaxwjJ9xumY0cSDF_rrV3vg',
 });
 
-airouter.post('/ai',middle, async (req, res) => {
+airouter.post('/ai', async (req, res) => {
   try {
     const { prompt } = req.body;
     if (!prompt) {
       return res.status(400).json({ msg: 'Prompt is required' });
     }
 
-    // Generate content using the AI model
+    // Structured prompt that returns only output or error, no explanation
     const response = await ai.models.generateContent({
       model: 'gemini-2.0-flash',
-      contents: prompt,
+      contents: [
+        {
+          role: 'user',
+          parts: [
+            {
+              text: `Analyze and run the following code:\n\n${prompt}\n\nIf the code is valid, return only its output. If there is a syntax or runtime error, return only the error message. No explanation. No formatting.`
+            }
+          ]
+        }
+      ],
     });
 
-    // Check if the response contains candidates
+    // Extract and clean the response
     if (response?.candidates?.length > 0) {
-      const responseText = response.candidates[0]?.content?.parts[0]?.text || 'No response';
-      const cleanedString = responseText.replace(/(\r\n|\n|\r)/gm, " ");
-      res.json({ response: cleanedString });
+      let responseText = response.candidates[0]?.content?.parts[0]?.text || 'No response';
+
+      // Clean possible "Output:" or similar prefixes
+      responseText = responseText
+        .replace(/^(Output:|The output is|Error:|Result:)/i, '')
+        .trim();
+
+      res.json({ response: responseText });
     } else {
       res.status(500).json({ msg: 'No valid response from AI model.' });
     }
