@@ -135,6 +135,7 @@ const Signin = () => {
       if (response.status === 200) {
         localStorage.setItem("token", response.data.token);
         alert("Sign in successfully");
+        navigate("/ai");
       }
     } catch (error) {
       if (error.response?.status === 404) {
