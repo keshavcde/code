@@ -1,0 +1,24 @@
+/* Full screen iframe for splash */
+*{
+    margin: 0;
+    padding: 0;
+}
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* border: 4px solid black; */
+    z-index: 9999;
+    background-color: #44474771;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    /* margin-bottom: 50px; */
+}
+  
+  /* Fade-out animation */
+  .fade-out {
+    opacity: 50%;
+  }
+  

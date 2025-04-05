@@ -42,11 +42,11 @@ function Code() {
 
   return (
     <div className="dark-editor-container">
-      <h1 className="dark-title">AI Code Editor</h1>
+      <h1 className="dark-title">The Code Editor</h1>
       <div className="editor-layout">
         <div className="dark-code-section">
           <div className="dark-header">
-            <h2>Code Editor</h2>
+            <h2>The Code Editor</h2>
             <button 
               type="button"
               onClick={handleRunCode} 

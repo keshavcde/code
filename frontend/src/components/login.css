@@ -1,0 +1,211 @@
+ /* .pass{
+    margin-left: 15.5%;
+
+}
+.logup_but {
+    width: 30%;
+    height: 10%;
+    /* margin: 15% 35%; 
+    margin-top: 13%;
+    margin-left: 32%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.login_but {
+    width: 68%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14.5%;
+    margin-top: 7%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.login_h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* text-shadow: 2px 1px 2px rgb(14, 13, 13); 
+    text-shadow: rgb(241, 230, 182) 1px 0 10px;
+}
+
+.login_div{
+    width: 350px;
+    height: 500px;
+    /* background: #292557; 
+    background: linear-gradient(to bottom right, rgb(252, 192, 81),rgb(243, 122, 217));
+    overflow: hidden;
+    border-radius: 20px;
+    /* box-shadow: 5px 20px 50px #000; 
+}
+.login_input , .login_pass {
+    width: 60%;
+    height: 10px;
+    background: #e0dede;
+    justify-content: center;
+    display: flex;
+    /*  margin-left: 15%; 
+    padding: 12px; 
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.login_input{
+    margin-top: 15%;
+    margin-left: 15%;
+}
+
+.login_pass{
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom left, white,rgb(233, 202, 146));
+}  */
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+}
+
+.login_div {
+    width: 350px;
+    height: 400px;
+    padding: 40px 30px;
+    background: linear-gradient(to bottom right, rgb(252, 192, 81), rgb(243, 122, 217));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    box-shadow:
+    inset 0 0 5px 5px rgba(13, 14, 13, 0.3),
+    0 0 20px 20px rgba(7, 7, 7, 0.6);
+
+}
+
+.login_h1 {
+    color: white;
+    text-shadow: rgb(53, 52, 47) 5px  3px;
+    margin-bottom: 35px;
+    margin-top: -4px;
+}
+
+.login_input,
+.login_pass {
+    width: 70%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #e0dede;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    /* border: 3px solid black; */
+    box-shadow:
+    inset 0 0 5px 5px rgba(13, 14, 13, 0.3),
+    0 0 20px 12px rgba(7, 7, 7, 0.6);
+
+}
+
+.logup_but {
+    width: 68%;
+    height: 12%;
+    margin-top: 11%;
+    margin-left: 0%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: black;
+    /* border: 3px solid black; */
+    box-shadow:
+    inset 0 0 5px 5px rgba(13, 14, 13, 0.3),
+    0 0 16px 9px rgba(7, 7, 7, 0.6);
+
+
+}
+
+.login_but {
+    width: 33%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0%;
+    margin-top: 2%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: black;
+    /* border: 3px solid black; */
+    box-shadow:
+    inset 0 0 5px 5px rgba(13, 14, 13, 0.3),
+    0 0 16px 9px rgba(7, 7, 7, 0.6);
+}
+.login_but:hover,
+.logup_but:hover {
+    background: #fff3;
+    color: rgb(22, 21, 21);
+    border: 1px solid white;
+}
+
+
+/* Fade-out and slide animation */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.page-transition.slide-out {
+    transform: translateX(-100%);
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7; /* Optional: Adjust for visibility */
+}
