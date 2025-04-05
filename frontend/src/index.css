@@ -5,8 +5,8 @@
 }
 .dark-editor-container {
   font-family: 'Fira Code', monospace, Arial, sans-serif;
-  max-width: 1200px;
-  min-width: 848px;
+  /* max-width: 1200px;
+  min-width: 848px; */
   margin: 0 auto;
   padding: 20px;
   height: 100vh;
