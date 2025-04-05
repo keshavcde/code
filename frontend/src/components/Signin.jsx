@@ -149,6 +149,7 @@ const Signin = () => {
   };
 
   return (
+    <div className="papa">
     <div className="video-container">
       <video autoPlay muted loop playsInline className="bg-video">
         <source src="C:\Users\jangi\Desktop\github\cdoegit\code\frontend\public\video.mp4" type="video/mp4" />
@@ -165,6 +166,7 @@ const Signin = () => {
         <button className="login_but" onClick={handlebtn}>SIGN IN</button>
         <button className="logup_but" onClick={() => navigate("/signup")}>SIGN UP</button>
       </div>
+    </div>
     </div>
   );
 };
